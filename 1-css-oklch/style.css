@@ -1,122 +1,126 @@
-:root{
-
-/* 
+:root {
+	/* 
 Lightness (0-100%)
 Chroma (0-0.400)
 Hue (0-360°) 
 */
 
-  --hue: 180;
-  --alpha: 1;
-  --c1-1: oklch(99% .05 var(--hue) /var(--alpha));
-  --c1-2: oklch(90% .1 var(--hue) /var(--alpha));
-  --c1-3: oklch(80% .2 var(--hue) /var(--alpha));
-  --c1-4: oklch(72% .25 var(--hue) /var(--alpha));
-  --c1-5: oklch(67% .31 var(--hue) /var(--alpha));
-  --c1-6: oklch(50% .27 var(--hue) /var(--alpha));
-  --c1-7: oklch(35% .25 var(--hue) /var(--alpha));
-  --c1-8: oklch(25% .2 var(--hue) /var(--alpha));
-  --c1-9: oklch(13% .2 var(--hue) /var(--alpha));
-  --c1-10: oklch(5% .1 var(--hue) /var(--alpha));
+	--hue: 180;
+	--alpha: 1;
+	--c1-1: oklch(99% 0.05 var(--hue) / var(--alpha));
+	--c1-2: oklch(90% 0.1 var(--hue) / var(--alpha));
+	--c1-3: oklch(80% 0.2 var(--hue) / var(--alpha));
+	--c1-4: oklch(72% 0.25 var(--hue) / var(--alpha));
+	--c1-5: oklch(67% 0.31 var(--hue) / var(--alpha));
+	--c1-6: oklch(50% 0.27 var(--hue) / var(--alpha));
+	--c1-7: oklch(35% 0.25 var(--hue) / var(--alpha));
+	--c1-8: oklch(25% 0.2 var(--hue) / var(--alpha));
+	--c1-9: oklch(13% 0.2 var(--hue) / var(--alpha));
+	--c1-10: oklch(5% 0.1 var(--hue) / var(--alpha));
 }
 
-.c1-1{
-  background: var(--c1-1);
+.c1-1 {
+	background: var(--c1-1);
 }
-.c1-2{
-  background: var(--c1-2);
+.c1-2 {
+	background: var(--c1-2);
 }
-.c1-3{
-  background: var(--c1-3);
+.c1-3 {
+	background: var(--c1-3);
 }
-.c1-4{
-  background: var(--c1-4);
+.c1-4 {
+	background: var(--c1-4);
 }
-.c1-5{
+.c1-5 {
+	background: var(--c1-5);
+}
+.c1-6 {
+	background: var(--c1-6);
+}
+.c1-7 {
+	background: var(--c1-7);
+}
+.c1-8 {
+	background: var(--c1-8);
+}
+.c1-9 {
+	background: var(--c1-9);
+}
+.c1-10 {
+	background: var(--c1-10);
+}
+
+body {
+	background: linear-gradient(0deg in oklab, var(--c1-9) 0%, var(--c1-10) 100%)
+		no-repeat;
+}
+
+::selection {
   background: var(--c1-5);
 }
-.c1-6{
-  background: var(--c1-6);
-}
-.c1-7{
-  background: var(--c1-7);
-}
-.c1-8{
-  background: var(--c1-8);
-}
-.c1-9{
-  background: var(--c1-9);
-}.c1-10{
-  background: var(--c1-10);
+
+.color-container {
+	margin-top: 2rem;
+	margin-left: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 1rem;
+	border: 1px solid var(--c1-1);
+	padding: 1rem;
 }
 
-body{
-  background: linear-gradient(0deg in oklab, var(--c1-9) 0%, var(--c1-10) 100%) no-repeat;
+.colors {
+	border: 1px solid var(--c1-1);
 }
-.color-container{
-  margin-top: 2rem;
-  margin-left: 2rem;
-  display: grid;
-  grid-template-columns:  1fr 2fr;
-  gap: 1rem;
-  border:1px solid var(--c1-1);
-  padding: 1rem;
-
+.colors div {
+	width: 100%;
+	height: 50px;
 }
-
-.colors{
-border:1px solid var(--c1-1);
+.card {
+	height: calc(50% - 0.5rem);
+	padding: 1rem;
 }
-.colors div{
-  width: 100%;
-  height: 50px;
-  
+.card h2 {
+	font-size: 1.5rem;
 }
-.card{
-  height:calc(50% - 0.5rem);
-  padding: 1rem;
+.card button {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.2rem;
 }
-.card h2{
-  font-size: 1.5rem;
+.card.card1 {
+	background: var(--c1-1);
+	color: var(--c1-10);
+	margin-bottom: 1rem;
+	border: 1px solid var(--c1-10);
 }
-.card button{
-  font-size: 1rem;
-  padding:0.5rem 1rem;
-  border: none;
-  border-radius: 0.2rem;
+.card.card1 button {
+	background: var(--c1-7);
+	color: var(--c1-1);
 }
-.card.card1{
-  background: var(--c1-1);
-  color: var(--c1-10);
-  margin-bottom: 1rem;
-  border: 1px solid var(--c1-10);
+.card.card1 button:hover {
+	background: var(--c1-8);
+	color: var(--c1-2);
 }
-.card.card1 button{
-  background: var(--c1-7);
-  color: var(--c1-1);
+.card.card2 {
+	background: var(--c1-10);
+	color: var(--c1-1);
+	border: 1px solid var(--c1-1);
 }
-.card.card1 button:hover{
-  background: var(--c1-8);
-  color: var(--c1-2);
+.card.card2 button {
+	background: var(--c1-3);
+	color: var(--c1-10);
 }
-.card.card2{
-  background: var(--c1-10);
-  color: var(--c1-1);
-  border: 1px solid var(--c1-1);
-}
-.card.card2 button{
-  background: var(--c1-3);
-  color: var(--c1-10);
-}
-.card.card2 button:hover{
-  background: var(--c1-2);
-  color: var(--c1-9);
+.card.card2 button:hover {
+	background: var(--c1-2);
+	color: var(--c1-9);
 }
 
-.gradient-c1{
-width: 100%;
-height:2rem;
-grid-column: span 2;
-border: 1px solid var(--c1-1);
-background: linear-gradient(90deg, var(--c1-1), var(--c1-10));
+.gradient-c1 {
+	width: 100%;
+	height: 2rem;
+	grid-column: span 2;
+	border: 1px solid var(--c1-1);
+	background: linear-gradient(90deg, var(--c1-1), var(--c1-10));
 }

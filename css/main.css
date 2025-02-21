@@ -69,11 +69,6 @@ body {
   background: var(--bg-color);
 }
 
-::-moz-selection {
-  background: var(--select-color);
-  text-shadow: none;
-}
-
 ::selection {
   background: var(--select-color);
   text-shadow: none;
