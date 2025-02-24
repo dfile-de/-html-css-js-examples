@@ -156,10 +156,10 @@ p {
    custom styles
    ========================================================================== */
 
-body {
+html {
   background: rgb(22, 20, 46);
   background: linear-gradient(0deg in oklab, rgb(19, 27, 63) 0%, rgb(9, 13, 26) 100%) no-repeat;
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
