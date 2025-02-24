@@ -51,7 +51,7 @@ Hue (0-360°)
 }
 
 html,body {
-	background: linear-gradient(0deg in oklab, var(--c1-9) 0%, var(--c1-10) 100%);
+	background:var(--c1-9);
 	height:100%;
 }
 
@@ -61,7 +61,10 @@ html,body {
 
 .container {
 	height:100%;
+	background: linear-gradient(0deg in oklab, var(--c1-9) 0%, var(--c1-10) 100%) no-repeat;
+	background-size:cover;
 }
+
 .color-container {
 	margin-top: 2rem;
 	margin-left: 2rem;
